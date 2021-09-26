@@ -1,5 +1,5 @@
 backend:
-  name: swelbourn-portfolio
+  name: git-gateway
   branch: master
 
 media_folder: static/img
