@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Stephen Welbourn's Portfolio`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Stephen Welbourn`,
+      summary: `Web developer.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `A place to put recent personal projects I want to show off.`,
+    siteUrl: `https://swelbourn-portfolio.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -112,8 +109,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Stephen Welbourn's Portfolio`,
+        short_name: `swelbourn-portfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
@@ -124,6 +121,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-netlify-cms",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
