@@ -13,8 +13,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: `backendProjects`,
+        path: `${__dirname}/content/backendProjects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `frontendProjects`,
+        path: `${__dirname}/content/frontendProjects`,
       },
     },
     {
@@ -122,6 +129,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-remark-collection",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
