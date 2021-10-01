@@ -13,15 +13,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `backendProjects`,
-        path: `${__dirname}/content/backendProjects`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `frontendProjects`,
-        path: `${__dirname}/content/frontendProjects`,
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
       },
     },
     {

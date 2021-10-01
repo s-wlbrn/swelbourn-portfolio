@@ -6,12 +6,19 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "frontendProjects"
-    label: "frontendProjects"
-    folder: "content/frontendProjects"
+  - name: "frontend-projects"
+    label: "Frontend Projects"
+    folder: "content/projects"
     create: true
+    filter: { field: "type", value: "frontend" }
     slug: "{{slug}}"
     fields:
+      - {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: ["frontend", "backend"],
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Icon", name: "icon", widget: "image" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -22,12 +29,19 @@ collections:
       - { label: "Screenshots", name: "screenshots", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "backendProjects"
-    label: "backendProjects"
-    folder: "content/backendProjects"
+  - name: "backend-projects"
+    label: "Backend Projects"
+    folder: "content/projects"
     create: true
+    filter: { field: "type", value: "backend" }
     slug: "{{slug}}"
     fields:
+      - {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: ["frontend", "backend"],
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Summary", name: "description", widget: "string" }

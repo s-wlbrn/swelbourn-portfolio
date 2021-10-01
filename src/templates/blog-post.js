@@ -67,10 +67,10 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query ProjectBySlug(
     $id: String!
-    $previousPostId: String
-    $nextPostId: String
+    $previousProjectId: String
+    $nextProjectId: String
   ) {
     site {
       siteMetadata {
@@ -87,7 +87,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: markdownRemark(id: { eq: $previousProjectId }) {
       fields {
         slug
       }
@@ -95,7 +95,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: markdownRemark(id: { eq: $nextProjectId }) {
       fields {
         slug
       }
