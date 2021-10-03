@@ -11,7 +11,7 @@ collections:
     files:
       - name: "skills"
         label: "Skills"
-        file: "content/skills.md"
+        file: "content/skills.json"
         fields:
           - label: "Skill"
             name: "skills"
