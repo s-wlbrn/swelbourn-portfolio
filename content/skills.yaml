@@ -1,0 +1,9 @@
+skills:
+  - name: JavaScript
+    image: /img/javascript.png
+    level: 7
+    description: Strong knowledge
+  - name: React
+    image: /img/react.png
+    level: 7
+    description: Strong knowledge
