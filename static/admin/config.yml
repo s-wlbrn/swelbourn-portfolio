@@ -11,7 +11,7 @@ collections:
     files:
       - name: "skills"
         label: "Skills"
-        file: "content/skills.json"
+        file: "content/skills.yaml"
         fields:
           - label: "Skill"
             name: "skills"
