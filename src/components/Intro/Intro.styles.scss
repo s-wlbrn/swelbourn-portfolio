@@ -1,0 +1,19 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 3rem);
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #4b4b4b, #242424);
+
+  h1 {
+    margin: 0 0 1rem 0;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .intro {
+    padding: 4rem;
+  }
+}
