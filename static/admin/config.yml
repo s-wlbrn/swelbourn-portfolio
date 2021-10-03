@@ -50,29 +50,30 @@ collections:
       - { label: "Repo", name: "repo", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "skills"
-    label: "Skills"
-    folder: "content/skills"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Skills"
-        name: "skills"
-        widget: "list"
-        summary: "{{fields.name}}"
+  - name: "info"
+  - label: "Info"
+  - files:
+      - name: "skills"
+        label: "Skills"
+        file: "content/skills.md"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
-          - {
-              label: "Level",
-              name: "level",
-              widget: "number",
-              value_type: "int",
-              min: 1,
-              max: 10,
-            }
-          - {
-              label: "Level Description",
-              name: "description",
-              widget: "string",
-            }
+          - label: "Skill List"
+            name: "skillList"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - {
+                  label: "Level",
+                  name: "level",
+                  widget: "number",
+                  value_type: "int",
+                  min: 1,
+                  max: 10,
+                }
+              - {
+                  label: "Level Description",
+                  name: "description",
+                  widget: "string",
+                }
