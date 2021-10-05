@@ -60,7 +60,9 @@
   --color-heading: white;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-light-background: #4b4b4b;
   --color-dark-background: #242424;
+  --color-dark-slate-background: #343c47;
 }
 
 /* HTML elements */
@@ -96,6 +98,8 @@ hr {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   margin: var(--spacing-24) 0;
   padding: var(--spacing-16);
 }

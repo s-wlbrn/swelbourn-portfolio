@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import { Intro } from "../components/Intro/Intro.component"
 import { Nav } from "../components/Nav/Nav.component"
 import { Projects } from "../components/Projects/Projects.component"
+import { SkillGrid } from "../components/SkillGrid/SkillGrid.component"
 
 const Homepage = ({ data, location }) => {
   return (
@@ -32,6 +33,7 @@ const Homepage = ({ data, location }) => {
             increasing exposure to the back-end side, particularly Node.js. Here
             are some of the things I've worked with.
           </p>
+          <SkillGrid />
         </section>
         <Projects />
       </main>
