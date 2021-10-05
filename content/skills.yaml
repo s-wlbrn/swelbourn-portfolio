@@ -7,3 +7,35 @@ skills:
     image: /img/react.png
     level: 7
     description: Strong knowledge
+  - name: HTML
+    level: 9
+    description: Strong knowledge
+    image: /img/html.png
+  - name: CSS
+    image: /img/css.png
+    level: 7
+    description: Strong knowledge
+  - name: Node.js
+    image: /img/node.png
+    level: 6
+    description: Working knowledge
+  - name: Git
+    level: 6
+    description: Working knowledge
+    image: /img/git.png
+  - name: MongoDB
+    level: 8
+    description: Strong knowledge
+    image: /img/mongodb.png
+  - name: PostgreSQL
+    image: /img/postgresql.png
+    level: 5
+    description: Working knowledge
+  - name: Jest
+    image: /img/jest.png
+    level: 9
+    description: Strong knowledge
+  - name: Gatsby
+    image: /img/gatsby.png
+    level: 5
+    description: Working knowledge
