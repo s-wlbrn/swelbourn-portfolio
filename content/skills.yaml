@@ -1,12 +1,4 @@
 skills:
-  - name: JavaScript
-    image: /img/javascript.png
-    level: 7
-    description: Strong knowledge
-  - name: React
-    image: /img/react.png
-    level: 7
-    description: Strong knowledge
   - name: HTML
     level: 9
     description: Strong knowledge
@@ -15,14 +7,26 @@ skills:
     image: /img/css.png
     level: 7
     description: Strong knowledge
-  - name: Node.js
-    image: /img/node.png
-    level: 6
-    description: Working knowledge
+  - name: JavaScript
+    image: /img/javascript.png
+    level: 7
+    description: Strong knowledge
+  - name: Typescript
+    level: 7
+    description: Strong knowledge
+    image: /img/typescript.png
+  - name: React
+    image: /img/react.png
+    level: 7
+    description: Strong knowledge
   - name: Git
     level: 6
     description: Working knowledge
     image: /img/git.png
+  - name: Node.js
+    image: /img/node.png
+    level: 6
+    description: Working knowledge
   - name: MongoDB
     level: 8
     description: Strong knowledge
