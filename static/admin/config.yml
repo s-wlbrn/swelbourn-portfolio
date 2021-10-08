@@ -54,7 +54,17 @@ collections:
       - { label: "Technologies", name: "technologies", widget: "list" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Repo", name: "repo", widget: "string" }
-      - { label: "Screenshots", name: "screenshots", widget: "list" }
+      - label: "Screenshots"
+        name: "screenshots"
+        widget: "list"
+        summary: "{{fields.image}}"
+        fields:
+          - {
+              label: "Screenshot",
+              name: "screenshot",
+              widget: "image",
+              media_folder: "/static/images/{{title}}",
+            }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "backend-projects"

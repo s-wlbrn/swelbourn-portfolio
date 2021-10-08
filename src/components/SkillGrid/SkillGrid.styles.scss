@@ -46,7 +46,7 @@
 @media screen and (min-width: 800px) {
   .skill-grid {
     //grid-template-columns: repeat(5, 1fr);
-    width: 60%;
+    max-width: 40%;
   }
 
   .skill-info {

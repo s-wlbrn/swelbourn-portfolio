@@ -54,15 +54,16 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: white;
   --color-text: white;
-  --color-text-light: #4f5969;
   --color-heading: white;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #bf6440;
   --color-light-background: #4b4b4b;
-  --color-dark-background: #242424;
-  --color-dark-slate-background: #343c47;
+  --color-dark-background: #1f1f1f;
+  --color-dark-slate-background: #2a3443;
+  --color-dark-accent: #473f34;
+  --color-main: #409bbf;
+  --color-main-light: #cfd5e1;
 }
 
 /* HTML elements */
@@ -84,7 +85,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
-  background-color: #4b4b4b;
+  background-color: var(--color-dark-background);
 }
 
 footer {
@@ -97,11 +98,10 @@ hr {
   border: 0;
 }
 
-section {
+main > section {
   display: flex;
   flex-direction: column;
-  margin: var(--spacing-24) 0;
-  padding: var(--spacing-16);
+  padding: var(--spacing-24) var(--spacing-16);
 }
 
 /* Heading */
@@ -198,10 +198,6 @@ li > p {
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
-li *:last-child {
-  margin-bottom: var(--spacing-0);
-}
-
 li > ul {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
@@ -256,7 +252,9 @@ a:focus {
 }
 
 .about {
-  padding-top: 4rem;
+  height: 50vh;
+  justify-content: center;
+  background-color: var(--color-dark-slate-background);
 }
 
 .about h2 {
@@ -270,6 +268,18 @@ a:focus {
 
 .skills {
   background-color: var(--color-dark-background);
+  height: 100vh;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skills header {
+  width: 50%;
+}
+
+.skills header p {
+  width: 80%;
+  margin-left: var(--spacing-8);
 }
 
 /* Media queries */

@@ -27,12 +27,14 @@ const Homepage = ({ data, location }) => {
           </p>
         </section>
         <section className="skills">
-          <h2>My skills</h2>
-          <p>
-            My concentration has mostly been on front-end technologies with
-            increasing exposure to the back-end side, particularly Node.js. Here
-            are some of the things I've worked with.
-          </p>
+          <header>
+            <h2>My skills</h2>
+            <p>
+              My concentration has mostly been on front-end technologies with
+              increasing exposure to the back-end side, particularly Node.js.
+              Here are some of the things I've worked with.
+            </p>
+          </header>
           <SkillGrid />
         </section>
         <Projects />
