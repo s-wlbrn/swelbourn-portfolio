@@ -1,0 +1,92 @@
+.container-modal-arrow {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  flex-shrink: 1;
+}
+
+[class^="modal-arrow"] {
+  background-color: var(--color-main-light);
+  height: 5rem;
+  width: 4rem;
+}
+
+.modal-arrow-right {
+  -webkit-clip-path: polygon(5% 0%, 100% 50%, 5% 100%, 0% 100%, 50% 50%, 0% 0%);
+  clip-path: polygon(5% 0%, 100% 50%, 5% 100%, 0% 100%, 50% 50%, 0% 0%);
+}
+
+.modal-arrow-left {
+  -webkit-clip-path: polygon(
+    100% 0%,
+    50% 50%,
+    100% 100%,
+    95% 100%,
+    0% 50%,
+    95% 0%
+  );
+  clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 95% 100%, 0% 50%, 95% 0%);
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.modal-image-container {
+  position: relative;
+  transform: scale(1s);
+}
+
+.modal-image {
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.modal-close-button {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.modal-close-icon {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-main-light);
+  opacity: 0.6;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.ReactModal__Overlay {
+  overflow: auto;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

@@ -7,7 +7,7 @@
 }
 
 [class^="carousel-arrow"] {
-  background-color: white;
+  background-color: var(--color-main-light);
   height: 100%;
   width: 4rem;
 }
@@ -31,17 +31,27 @@
 
 .carousel-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
   width: 100%;
-  justify-content: space-between;
   overflow: hidden;
+
+  opacity: 0;
+
+  -webkit-transition: 0.25s all ease-in-out;
+  -moz-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
 
-.carousel-element {
+.carousel-image {
   width: 15rem;
   height: 10rem;
   background-position: center;
-  background-size: cover;
-  transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

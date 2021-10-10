@@ -11,17 +11,17 @@ technologies:
 link: https://transpyr.netlify.app
 repo: https://github.com/swelbourn/transpyr
 screenshots:
-  - screenshot: /static/img/transpyr/1.png
-  - screenshot: /static/img/transpyr/1m.png
-  - screenshot: /static/img/transpyr/2.png
-  - screenshot: /static/img/transpyr/2m.png
-  - screenshot: /static/img/transpyr/3.png
-  - screenshot: /static/img/transpyr/3m.png
-  - screenshot: /static/img/transpyr/4.png
-  - screenshot: /static/img/transpyr/4m.png
-  - screenshot: /static/img/transpyr/5.png
-  - screenshot: /static/img/transpyr/5m1.png
-  - screenshot: /static/img/transpyr/6.png
+  - screenshot: /img/transpyr/1.png
+  - screenshot: /img/transpyr/1m.png
+  - screenshot: /img/transpyr/2.png
+  - screenshot: /img/transpyr/2m.png
+  - screenshot: /img/transpyr/3.png
+  - screenshot: /img/transpyr/3m.png
+  - screenshot: /img/transpyr/4.png
+  - screenshot: /img/transpyr/4m.png
+  - screenshot: /img/transpyr/5.png
+  - screenshot: /img/transpyr/5m1.png
+  - screenshot: /img/transpyr/6.png
 ---
 
 # **Transpyr is a React app for event hosting.**

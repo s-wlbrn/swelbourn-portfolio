@@ -63,7 +63,7 @@ collections:
               label: "Screenshot",
               name: "screenshot",
               widget: "image",
-              media_folder: "/static/images/{{title}}",
+              media_folder: "/static/img/{{title}}",
             }
       - { label: "Body", name: "body", widget: "markdown" }
 
