@@ -2,12 +2,20 @@ import React from 'react';
 
 import './CustomButton.styles.scss';
 
-export const CustomButton = ({ children, warning, red, ...otherAttr }) => (
-  <button
-    className={`custom-button ${warning ? 'warning' : ''}`}
-    {...otherAttr}
-  >
-    {red ? 'UPDATE ME TO WARNING' : null}
-    {children}
-  </button>
-);
+export const CustomButton = ({
+  children,
+  hyperlink,
+  alternate,
+  ...otherAttr
+}) => {
+  const ButtonTag = hyperlink ? 'a' : 'button';
+
+  return (
+    <ButtonTag
+      className={`custom-button${alternate ? ' alternate' : ''}`}
+      {...otherAttr}
+    >
+      {children}
+    </ButtonTag>
+  );
+};

@@ -10,16 +10,49 @@
   ul {
     display: flex;
     justify-content: space-around;
-    width: 50%;
     margin: 0;
+    width: 100%;
+    max-width: var(--maxWidth-4xl);
+    height: 100%;
     list-style: none;
   }
 
-  li {
-    margin-bottom: 0.5rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
 
-    &:hover {
-      background-color: rgb(83, 83, 83);
+  li {
+    position: relative;
+    margin-bottom: 0rem;
+    padding-bottom: var(--spacing-1);
+    width: 25%;
+    background: radial-gradient(ellipse at bottom, transparent, transparent);
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: radial-gradient(
+        ellipse at bottom,
+        var(--color-accent),
+        transparent,
+        transparent
+      );
+      z-index: -1;
+      transition: opacity 0.2s linear;
+      opacity: 0;
+    }
+
+    &:hover::before {
+      opacity: 1;
     }
   }
 }

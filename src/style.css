@@ -1,7 +1,7 @@
 /* CSS Custom Properties Definitions */
 
 :root {
-  --maxWidth-none: "none";
+  --maxWidth-none: 'none';
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
   --maxWidth-md: 28rem;
@@ -10,9 +10,9 @@
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
-  --maxWidth-full: "100%";
+  --maxWidth-full: '100%';
   --maxWidth-wrapper: var(--maxWidth-2xl);
-  --spacing-px: "1px";
+  --spacing-px: '1px';
   --spacing-0: 0;
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -28,9 +28,9 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --fontFamily-serif: 'Merriweather', 'Georgia', Cambria, 'Times New Roman',
     Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
@@ -57,13 +57,14 @@
   --color-text: white;
   --color-heading: white;
   --color-heading-black: black;
-  --color-accent: #bf6440;
+  --color-accent: #ad5b3b;
+  --color-accent-light: #d99478;
   --color-light-background: #4b4b4b;
   --color-dark-background: #1f1f1f;
   --color-dark-slate-background: #2a3443;
   --color-dark-accent: #473f34;
-  --color-main: #409bbf;
-  --color-main-light: #cfd5e1;
+  --color-main: #3d94b7;
+  --color-main-light: #8ec4d9;
 }
 
 /* HTML elements */
@@ -101,7 +102,7 @@ hr {
 main > section {
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-24) var(--spacing-16);
+  padding: var(--spacing-24) var(--spacing-8);
 }
 
 /* Heading */
@@ -114,7 +115,7 @@ h5,
 h6 {
   font-family: var(--font-heading);
   margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
 }
@@ -237,11 +238,7 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
-}
-
-a:hover,
-a:focus {
+  color: white;
   text-decoration: none;
 }
 
@@ -249,37 +246,6 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
-}
-
-.about {
-  height: 50vh;
-  justify-content: center;
-  background-color: var(--color-dark-slate-background);
-}
-
-.about h2 {
-  margin: 0 0 var(--spacing-8);
-}
-
-.about p {
-  margin-left: var(--spacing-8);
-  width: 50%;
-}
-
-.skills {
-  background-color: var(--color-dark-background);
-  height: 100vh;
-  flex-direction: row;
-  align-items: center;
-}
-
-.skills header {
-  width: 50%;
-}
-
-.skills header p {
-  width: 80%;
-  margin-left: var(--spacing-8);
 }
 
 /* Media queries */
@@ -292,5 +258,11 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main > section {
+    padding: var(--spacing-24) var(--spacing-16);
   }
 }

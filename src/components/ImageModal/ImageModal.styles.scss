@@ -5,7 +5,7 @@
   flex-shrink: 1;
 }
 
-[class^="modal-arrow"] {
+[class^='modal-arrow'] {
   background-color: var(--color-main-light);
   height: 5rem;
   width: 4rem;
@@ -37,7 +37,6 @@
 
 .modal-image-container {
   position: relative;
-  transform: scale(1s);
 }
 
 .modal-image {

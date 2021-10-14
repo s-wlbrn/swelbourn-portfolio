@@ -1,14 +1,9 @@
-import { useStaticQuery, graphql } from "gatsby"
-import React, { useState } from "react"
-import Modal from "react-modal"
+import { useStaticQuery, graphql } from 'gatsby';
+import React from 'react';
 
-import { mod } from "../../libs/mod"
+import { ProjectCard } from '../ProjectCard/ProjectCard.component';
 
-import { CustomButton } from "../CustomButton/CustomButton.component"
-import { ProjectCard } from "../ProjectCard/ProjectCard.component"
-import { ScreenshotCarousel } from "../ScreenshotCarousel/ScreenshotCarousel.component"
-
-import "./Projects.styles.scss"
+import './Projects.styles.scss';
 
 export const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -34,6 +29,7 @@ export const Projects = () => {
               screenshots {
                 screenshot
               }
+              type
             }
           }
         }
@@ -60,17 +56,29 @@ export const Projects = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2>Projects</h2>
-      <ol className="projects-list">
-        {data.frontendProjects.edges.map(el => {
-          const project = el.node.frontmatter
-          return <ProjectCard project={project} />
-        })}
-      </ol>
+      <section className="frontend-projects">
+        <h3 className="projects-subheading">Front-End</h3>
+        <ol className="projects-list">
+          {data.frontendProjects.edges.map((el) => {
+            const project = el.node.frontmatter;
+            return <ProjectCard key={project.name} project={project} />;
+          })}
+        </ol>
+      </section>
+      <section className="backend-projects">
+        <h3 className="projects-subheading">Back-End</h3>
+        <ol className="projects-list">
+          {data.backendProjects.edges.map((el) => {
+            const project = el.node.frontmatter;
+            return <ProjectCard key={project.name} project={project} />;
+          })}
+        </ol>
+      </section>
     </section>
-  )
-}
+  );
+};

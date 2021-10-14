@@ -48,13 +48,14 @@ export const ScreenshotCarousel = ({ screenshots }) => {
 
   return (
     <div className="screenshot-carousel">
-      <ImageModal
-        modalActive={modalActive}
-        modalIndex={modalIndex}
-        imageList={screenshots}
-        scrollModal={scrollModal}
-        closeModal={closeModal}
-      />
+      {modalActive && (
+        <ImageModal
+          modalIndex={modalIndex}
+          imageList={screenshots}
+          scrollModal={scrollModal}
+          closeModal={closeModal}
+        />
+      )}
       <button
         className="carousel-arrow-left"
         type="button"
@@ -65,7 +66,10 @@ export const ScreenshotCarousel = ({ screenshots }) => {
           const imageIndex = mod(el, screenshots.length)
 
           return (
-            <figure onClick={() => openModal(imageIndex)}>
+            <figure
+              key={`${el}-${imageIndex}`}
+              onClick={() => openModal(imageIndex)}
+            >
               <div
                 className="carousel-image"
                 style={{

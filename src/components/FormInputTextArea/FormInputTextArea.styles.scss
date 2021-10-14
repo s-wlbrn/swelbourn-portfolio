@@ -1,0 +1,40 @@
+@mixin shrinkLabel {
+  top: -22px;
+  font-size: 12px;
+  color: var(--color-main-light);
+}
+
+.form-text-area-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-text-area {
+  border: 1px solid white;
+  background: none;
+  color: white;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus ~ .form-text-area-label {
+    @include shrinkLabel();
+  }
+}
+
+.form-text-area-label {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 2px;
+  transition: 300ms ease all;
+
+  &.shrink {
+    @include shrinkLabel();
+  }
+}

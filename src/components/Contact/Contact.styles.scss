@@ -1,0 +1,29 @@
+.contact {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #1f1f1f,
+    #1f1f1f,
+    #343742,
+    #425369,
+    #467291,
+    #3d94b7
+  );
+
+  header {
+    margin-bottom: var(--spacing-8);
+  }
+}
+
+.contact-social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-16);
+  width: 100%;
+
+  a {
+    margin: 0 var(--spacing-8);
+  }
+}

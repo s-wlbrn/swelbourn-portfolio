@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import "./Intro.styles.scss"
+import './Intro.styles.scss';
 
 export const Intro = () => {
   return (
@@ -12,5 +12,5 @@ export const Intro = () => {
       </h1>
       <h2>Web Developer</h2>
     </header>
-  )
-}
+  );
+};
