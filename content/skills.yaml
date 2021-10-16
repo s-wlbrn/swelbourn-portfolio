@@ -7,9 +7,13 @@ skills:
     image: /img/css.png
     level: 7
     description: Strong knowledge
+  - name: Sass
+    image: /img/sass.png
+    level: 6
+    description: Working knowledge
   - name: JavaScript
     image: /img/javascript.png
-    level: 7
+    level: 9
     description: Strong knowledge
   - name: Typescript
     level: 7
@@ -28,7 +32,7 @@ skills:
     level: 6
     description: Working knowledge
   - name: MongoDB
-    level: 8
+    level: 7
     description: Strong knowledge
     image: /img/mongodb.png
   - name: PostgreSQL
@@ -41,5 +45,5 @@ skills:
     description: Strong knowledge
   - name: Gatsby
     image: /img/gatsby.png
-    level: 5
-    description: Working knowledge
+    level: 3
+    description: Strong knowledge
