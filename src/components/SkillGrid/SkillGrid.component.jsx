@@ -1,4 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 import './SkillGrid.styles.scss';
@@ -9,7 +10,11 @@ export const SkillGrid = () => {
       contentYaml {
         skills {
           name
-          image
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 250, placeholder: TRACED_SVG)
+            }
+          }
           level
           description
         }
@@ -20,6 +25,7 @@ export const SkillGrid = () => {
   return (
     <div className="skill-grid">
       {data.contentYaml.skills.map((skill) => {
+        const image = getImage(skill.image);
         return (
           <div key={skill.name} className="skill-item">
             <div className="skill-info">
@@ -34,7 +40,7 @@ export const SkillGrid = () => {
               </div>
               <p>{skill.description}</p>
             </div>
-            <img src={skill.image} alt={skill.name} />
+            <GatsbyImage image={image} alt={skill.name} />
           </div>
         );
       })}

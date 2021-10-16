@@ -24,10 +24,23 @@ export const Projects = () => {
               technologies
               repo
               link
-              icon
+              icon {
+                childImageSharp {
+                  gatsbyImageData(width: 75, placeholder: TRACED_SVG)
+                }
+              }
               description
               screenshots {
-                screenshot
+                screenshot {
+                  childImageSharp {
+                    gatsbyImageData(
+                      placeholder: BLURRED
+                      transformOptions: { fit: CONTAIN }
+                      formats: [JPG]
+                      quality: 90
+                    )
+                  }
+                }
               }
               type
             }

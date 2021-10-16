@@ -1,4 +1,5 @@
 import React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import { ScreenshotCarousel } from '../ScreenshotCarousel/ScreenshotCarousel.component';
 import { CustomButton } from '../CustomButton/CustomButton.component';
@@ -6,14 +7,17 @@ import { CustomButton } from '../CustomButton/CustomButton.component';
 import './ProjectCard.styles.scss';
 
 export const ProjectCard = ({ project }) => {
+  const icon = getImage(project.icon);
+
   return (
     <li role="article" className="project-overview">
       <header className="project-overview-header">
         <div className="project-overview-icon">
-          <img
-            src={project.icon || './images/backend.jpg'}
-            alt={`${project.name} icon`}
-          />
+          {project.type === 'frontend' ? (
+            <GatsbyImage image={icon} alt={`${project.name} icon`} />
+          ) : (
+            <img src="./images/backend.jpg" alt="backend project" />
+          )}
         </div>
         <div className="project-overview-title">
           <h3>{project.title}</h3>

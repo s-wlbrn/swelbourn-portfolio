@@ -9,8 +9,13 @@ module.exports = {
     siteUrl: `https://swelbourn-portfolio.netlify.app/`,
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/`,
+        name: `static`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,16 +31,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          //'gatsby-remark-relative-images',
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -54,6 +53,8 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {

@@ -1,3 +1,4 @@
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useEffect } from 'react';
 import Modal from 'react-modal';
 
@@ -51,6 +52,8 @@ export const ImageModal = ({
     };
   }, [scrollModal]);
 
+  const image = getImage(imageList[modalIndex]?.screenshot);
+
   return (
     <Modal
       isOpen
@@ -74,8 +77,8 @@ export const ImageModal = ({
           >
             <div className="modal-close-icon" />
           </div>
-          <img
-            src={imageList[modalIndex]?.screenshot}
+          <GatsbyImage
+            image={image}
             alt="Project screenshot"
             className="modal-image"
             onClick={(e) => e.stopPropagation()}
