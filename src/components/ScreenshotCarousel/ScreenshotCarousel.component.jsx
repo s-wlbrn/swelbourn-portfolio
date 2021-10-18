@@ -66,7 +66,7 @@ export const ScreenshotCarousel = ({ screenshots }) => {
         {displayArr.map((el) => {
           const imageIndex = mod(el, screenshots.length);
           const image = getImage(screenshots[imageIndex].screenshot);
-          console.log(image);
+
           return (
             <figure
               key={`${el}-${imageIndex}`}

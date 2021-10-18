@@ -1,0 +1,15 @@
+.project-tech {
+  display: flex;
+  margin-left: 1.5vw;
+}
+
+.project-tech-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  border-radius: 5px;
+  background-color: var(--color-dark-background);
+}

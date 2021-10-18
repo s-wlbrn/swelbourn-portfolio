@@ -5,9 +5,8 @@ date: 2021-09-27T21:32:17.659Z
 description: Backend for Transpyr, handling creation, querying, and booking of
   events, auth, and user operations.
 technologies:
-  - node
-  - express
-  - mongodb
+  - Node.js
+  - MongoDB
 docs: https://github.com/swelbourn/transpyr-api
 repo: https://github.com/swelbourn/transpyr-api
 ---

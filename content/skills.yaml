@@ -1,49 +1,70 @@
-skills:
-  - name: HTML
-    level: 9
-    description: Strong knowledge
-    image: /img/html.png
-  - name: CSS
-    image: /img/css.png
-    level: 7
-    description: Strong knowledge
-  - name: Sass
-    image: /img/sass.png
-    level: 6
-    description: Working knowledge
-  - name: JavaScript
-    image: /img/javascript.png
-    level: 9
-    description: Strong knowledge
-  - name: Typescript
-    level: 7
-    description: Strong knowledge
-    image: /img/typescript.png
-  - name: React
-    image: /img/react.png
-    level: 7
-    description: Strong knowledge
-  - name: Git
-    level: 6
-    description: Working knowledge
-    image: /img/git.png
-  - name: Node.js
-    image: /img/node.png
-    level: 6
-    description: Working knowledge
-  - name: MongoDB
-    level: 7
-    description: Strong knowledge
-    image: /img/mongodb.png
-  - name: PostgreSQL
-    image: /img/postgresql.png
-    level: 5
-    description: Working knowledge
-  - name: Jest
-    image: /img/jest.png
-    level: 9
-    description: Strong knowledge
-  - name: Gatsby
-    image: /img/gatsby.png
-    level: 3
-    description: Strong knowledge
+name: HTML
+level: 9
+description: Strong knowledge
+image: /img/html.png
+
+---
+name: CSS
+level: 8
+description: Strong knowledge
+image: /img/css.png
+
+---
+name: JavaScript
+level: 8
+description: Strong knowledge
+image: /img/javascript.png
+
+---
+name: Typescript
+level: 7
+description: Strong knowledge
+image: /img/typescript.png
+
+---
+name: React
+level: 7
+description: Strong knowledge
+image: /img/react.png
+
+---
+name: Git
+level: 6
+description: Working knowledge
+image: /img/git.png
+
+---
+name: Node.js
+level: 6
+description: Working knowledge
+image: /img/node.png
+
+---
+name: MongoDB
+level: 7
+description: Strong knowledge
+image: /img/mongodb.png
+
+---
+name: PostgreSQL
+level: 5
+description: Working knowledge
+image: /img/postgresql.png
+
+---
+name: Gatsby
+level: 7
+description: Strong knowledge
+image: /img/gatsby.png
+
+---
+name: Sass
+level: 6
+description: Working knowledge
+image: /img/sass.png
+
+---
+name: Jest
+level: 9
+description: Strong knowledge
+image: /img/jest.png

@@ -1,14 +1,16 @@
 import React from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 
 import { ScreenshotCarousel } from '../ScreenshotCarousel/ScreenshotCarousel.component';
 import { CustomButton } from '../CustomButton/CustomButton.component';
+import { TechList } from '../TechList/TechList.component';
 
 import './ProjectCard.styles.scss';
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project, slug }) => {
   const icon = getImage(project.icon);
-
+  console.log(project);
   return (
     <li role="article" className="project-overview">
       <header className="project-overview-header">
@@ -16,11 +18,17 @@ export const ProjectCard = ({ project }) => {
           {project.type === 'frontend' ? (
             <GatsbyImage image={icon} alt={`${project.name} icon`} />
           ) : (
-            <img src="./images/backend.jpg" alt="backend project" />
+            <StaticImage
+              src="../../../static/img/backend.png"
+              alt="backend project"
+              placeholder="tracedSVG"
+              width={75}
+            />
           )}
         </div>
         <div className="project-overview-title">
           <h3>{project.title}</h3>
+          <TechList technologies={project.technologies} />
         </div>
       </header>
       {project.type === 'frontend' && (
@@ -35,7 +43,14 @@ export const ProjectCard = ({ project }) => {
             Github Repo
           </CustomButton>
         </div>
-        <p>{project.description}</p>
+        <div className="project-overview-info-details">
+          <div className="project-overview-info-details-description">
+            <p>{project.description}</p>
+          </div>
+          <div className="project-overview-info-details-link">
+            <Link to={slug}>More details...</Link>
+          </div>
+        </div>
       </section>
     </li>
   );

@@ -58,3 +58,30 @@
 .project-overview-info {
   padding: 0rem 1rem 1rem;
 }
+
+.project-overview-info-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 var(--spacing-8);
+}
+
+.project-overview-info-details-link {
+  text-align: left;
+}
+
+@media screen and (min-width: 900px) {
+  .project-overview-info-details {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-overview-info-details-description {
+    padding-right: 2rem;
+    width: 80%;
+  }
+
+  .project-overview-info-details-link {
+    margin-left: 0;
+  }
+}

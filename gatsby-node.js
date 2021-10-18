@@ -68,7 +68,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: `/projects${value}`,
+      value,
     })
   }
 }
@@ -163,12 +163,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
 
-    type Skill @infer {
+    type SkillsYaml implements Node @infer {
       image: File @fileByDataPath
-    }
-
-    type ContentYaml implements Node @infer {
-      skills: [Skill]
+      name: String
+      description: String
+      level: Int
     }
 
   `);

@@ -5,9 +5,9 @@ icon: /img/transpyrfav.png
 date: 2021-09-26T06:53:32.657Z
 description: An app for creating, managing, and booking events.
 technologies:
-  - javascript
-  - react
-  - sass
+  - JavaScript
+  - React
+  - Sass
 link: https://transpyr.netlify.app
 repo: https://github.com/swelbourn/transpyr
 screenshots:

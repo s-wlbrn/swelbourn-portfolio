@@ -7,16 +7,18 @@ import './SkillGrid.styles.scss';
 export const SkillGrid = () => {
   const data = useStaticQuery(graphql`
     query SkillsQuery {
-      contentYaml {
-        skills {
-          name
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 250, placeholder: TRACED_SVG)
+      allSkillsYaml {
+        edges {
+          node {
+            name
+            level
+            description
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 250, placeholder: TRACED_SVG)
+              }
             }
           }
-          level
-          description
         }
       }
     }
@@ -24,23 +26,27 @@ export const SkillGrid = () => {
 
   return (
     <div className="skill-grid">
-      {data.contentYaml.skills.map((skill) => {
-        const image = getImage(skill.image);
+      {data.allSkillsYaml.edges.map(({ node }) => {
+        const image = getImage(node.image);
         return (
-          <div key={skill.name} className="skill-item">
+          <div key={node.name} className="skill-item">
             <div className="skill-info">
-              <h3>{skill.name}</h3>
+              <h3>{node.name}</h3>
               <div className="progress-border">
                 <span
                   className="progress-bar"
-                  style={{ width: `${skill.level * 10}%` }}
+                  style={{ width: `${node.level * 10}%` }}
                 >
-                  <span className="progress-bar-overlay" />
+                  <span className="progress-bar-fill" />
                 </span>
               </div>
-              <p>{skill.description}</p>
+              <p>{node.description}</p>
             </div>
-            <GatsbyImage image={image} alt={skill.name} />
+            <GatsbyImage
+              image={image}
+              alt={node.name}
+              className="project-image"
+            />
           </div>
         );
       })}

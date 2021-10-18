@@ -15,11 +15,11 @@
   width: 10rem;
   height: 10rem;
   background-color: var(--color-dark-slate-background);
+}
 
-  img {
-    width: 80%;
-    transition: all 0.5s;
-  }
+.project-image {
+  width: 80%;
+  transition: all 0.5s;
 }
 
 .skill-info {
@@ -31,6 +31,7 @@
   height: 100%;
   opacity: 90%;
   background-color: var(--color-dark-slate-background);
+  z-index: 1;
 }
 
 .progress-border {
@@ -45,7 +46,7 @@
   height: 0.5rem;
 }
 
-.progress-bar-overlay {
+.progress-bar-fill {
   display: block;
   width: 100%;
   height: 100%;
@@ -68,11 +69,11 @@
         display: flex;
       }
 
-      img {
+      .project-image {
         width: 100%;
       }
 
-      .progress-bar-overlay {
+      .progress-bar-fill {
         animation: progressBar 0.5s ease-out;
         animation-fill-mode: both;
         -webkit-animation: progressBar 0.5s ease-out;
