@@ -12,7 +12,7 @@ export const TechList = ({ technologies }) => {
           node {
             image {
               childImageSharp {
-                gatsbyImageData(width: 32, placeholder: TRACED_SVG)
+                gatsbyImageData(width: 32, placeholder: TRACED_SVG, quality: 90)
               }
             }
             name

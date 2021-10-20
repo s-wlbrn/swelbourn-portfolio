@@ -4,6 +4,7 @@ title: Transpyr
 icon: /img/transpyrfav.png
 date: 2021-09-26T06:53:32.657Z
 description: An app for creating, managing, and booking events.
+headline: Transpyr is a React app for event planning.
 technologies:
   - JavaScript
   - React
@@ -24,9 +25,7 @@ screenshots:
   - screenshot: /img/transpyr/6.png
 ---
 
-# **Transpyr is a React app for event hosting.**
-
-## Features
+### Features
 
 - Browsing, searching, and booking events in a user's area or online without creating an account.
 - User account creation and management: Changing names, password, favorite events privacy.
@@ -37,7 +36,7 @@ screenshots:
 - Options to supply a personal refund policy and choose between covering the service fee or passing it to attendees.
 - 'My Events' shows an organizer's upcoming events on a calendar. Event management shows number of bookings for each ticket, estimated earnings, and the ability to cancel specific tickets or the entire event.
 
-## Technologies Used
+### Technologies Used
 
 - **React** (including Context API for auth state and Hooks)
 - **React Router**

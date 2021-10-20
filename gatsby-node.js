@@ -4,10 +4,10 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  // template for project page
+  const projectPage = path.resolve(`./src/templates/project-page.jsx`)
 
-  // Get all markdown blog posts sorted by date
+  // Get all markdown projects sorted by date
   const result = await graphql(
     `
       {
@@ -36,10 +36,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const projects = result.data.allMarkdownRemark.nodes
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
-
   if (projects.length > 0) {
     projects.forEach((project, index) => {
       const previousProjectId = index === 0 ? null : projects[index - 1].id
@@ -48,7 +44,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: project.fields.slug,
-        component: blogPost,
+        component: projectPage,
         context: {
           id: project.id,
           previousProjectId,

@@ -4,6 +4,7 @@ title: transpyr-api
 date: 2021-09-27T21:32:17.659Z
 description: Backend for Transpyr, handling creation, querying, and booking of
   events, auth, and user operations.
+headline: transpyr-api powers Transpyr’s event, authorization, and user management operations.
 technologies:
   - Node.js
   - MongoDB
@@ -11,9 +12,7 @@ docs: https://github.com/swelbourn/transpyr-api
 repo: https://github.com/swelbourn/transpyr-api
 ---
 
-# **transpyr-api powers Transpyr's event, authorization, and user management operations.**
-
-## Features:
+### Features:
 
 - Account creation, modification, and deactivation.
 - Search for events by keyword, or query with the ability to sort, paginate, and filter by fields or location radius.
@@ -29,7 +28,7 @@ repo: https://github.com/swelbourn/transpyr-api
 - More powerful CRUD operations for admins, including the ability to view and modify unpublished events.
 - Streams event/user images from Transpyr's Amazon S3 bucket.
 
-## Technologies Used:
+### Technologies Used:
 
 - **Express**
 - **Mongoose** ODM for **MongoDB**

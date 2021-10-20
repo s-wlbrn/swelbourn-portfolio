@@ -1,27 +1,23 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { Intro } from '../components/Intro/Intro.component';
-import { Nav } from '../components/Nav/Nav.component';
 import { About } from '../components/About/About.component';
 import { Skills } from '../components/Skills/Skills.component';
 import { Projects } from '../components/Projects/Projects.component';
 import { Contact } from '../components/Contact/Contact.component';
-import { Footer } from '../components/Footer/Footer.component';
 
 const Homepage = () => {
   return (
     <>
       <Intro />
-      <Nav />
-      <main>
+      <Layout>
         <About />
         <Skills />
         <Projects />
         <Contact />
-      </main>
-      <Footer />
+      </Layout>
     </>
   );
 };

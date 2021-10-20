@@ -4,7 +4,11 @@
   justify-content: center;
   height: calc(100vh - 3rem);
   padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #4b4b4b, #242424);
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark-slate-background),
+    var(--color-dark-background)
+  );
 
   h1 {
     margin: 0 0 1rem 0;

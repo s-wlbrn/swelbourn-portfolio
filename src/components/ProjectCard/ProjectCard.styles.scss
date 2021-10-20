@@ -13,14 +13,10 @@
 }
 
 .project-overview-title {
-  display: flex;
-  align-items: center;
   margin: 0 -2rem 0 -7rem;
   padding-left: 5rem;
   width: 110%;
   height: 6rem;
-  background-color: var(--color-accent);
-  clip-path: polygon(0 0, 95% 0, 101% calc(94% - 3vw), 0% 100%);
 
   h3 {
     margin: 0;

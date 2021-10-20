@@ -6,84 +6,85 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "info"
-    label: "Info"
+  - name: 'info'
+    label: 'Info'
     files:
-      - name: "skills"
-        label: "Skills"
-        file: "content/skills.yaml"
+      - name: 'skills'
+        label: 'Skills'
+        file: 'content/skills.yaml'
         fields:
-          - label: "Skill"
-            name: "skills"
-            widget: "list"
-            summary: "{{fields.name}}"
+          - label: 'Skill'
+            name: 'skills'
+            widget: 'list'
+            summary: '{{fields.name}}'
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
               - {
-                  label: "Level",
-                  name: "level",
-                  widget: "number",
-                  value_type: "int",
+                  label: 'Level',
+                  name: 'level',
+                  widget: 'number',
+                  value_type: 'int',
                   min: 1,
                   max: 10,
                 }
               - {
-                  label: "Level Description",
-                  name: "description",
-                  widget: "string",
+                  label: 'Level Description',
+                  name: 'description',
+                  widget: 'string',
                 }
 
-  - name: "frontend-projects"
-    label: "Frontend Projects"
-    folder: "content/projects"
+  - name: 'frontend-projects'
+    label: 'Frontend Projects'
+    folder: 'content/projects'
     create: true
-    filter: { field: "type", value: "frontend" }
-    slug: "{{slug}}"
+    filter: { field: 'type', value: 'frontend' }
+    slug: '{{slug}}'
     fields:
       - {
-          label: "Type",
-          name: "type",
-          widget: "select",
-          options: ["frontend", "backend"],
+          label: 'Type',
+          name: 'type',
+          widget: 'select',
+          options: ['frontend', 'backend'],
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Icon", name: "icon", widget: "image" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "description", widget: "string" }
-      - { label: "Technologies", name: "technologies", widget: "list" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Repo", name: "repo", widget: "string" }
-      - label: "Screenshots"
-        name: "screenshots"
-        widget: "list"
-        summary: "{{fields.image}}"
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Icon', name: 'icon', widget: 'image' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Headline', name: 'headline', widget: 'string' }
+      - { label: 'Technologies', name: 'technologies', widget: 'list' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Repo', name: 'repo', widget: 'string' }
+      - label: 'Screenshots'
+        name: 'screenshots'
+        widget: 'list'
+        summary: '{{fields.image}}'
         fields:
           - {
-              label: "Screenshot",
-              name: "screenshot",
-              widget: "image",
-              media_folder: "/static/img/{{title}}",
+              label: 'Screenshot',
+              name: 'screenshot',
+              widget: 'image',
+              media_folder: '/static/img/{{title}}',
             }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: "backend-projects"
-    label: "Backend Projects"
-    folder: "content/projects"
+  - name: 'backend-projects'
+    label: 'Backend Projects'
+    folder: 'content/projects'
     create: true
-    filter: { field: "type", value: "backend" }
-    slug: "{{slug}}"
+    filter: { field: 'type', value: 'backend' }
+    slug: '{{slug}}'
     fields:
       - {
-          label: "Type",
-          name: "type",
-          widget: "select",
-          options: ["frontend", "backend"],
+          label: 'Type',
+          name: 'type',
+          widget: 'select',
+          options: ['frontend', 'backend'],
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "description", widget: "string" }
-      - { label: "Technologies", name: "technologies", widget: "list" }
-      - { label: "Documentation", name: "docs", widget: "string" }
-      - { label: "Repo", name: "repo", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Summary', name: 'description', widget: 'string' }
+      - { label: 'Technologies', name: 'technologies', widget: 'list' }
+      - { label: 'Documentation', name: 'docs', widget: 'string' }
+      - { label: 'Repo', name: 'repo', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

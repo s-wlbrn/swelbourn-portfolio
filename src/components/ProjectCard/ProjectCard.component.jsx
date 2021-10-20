@@ -5,12 +5,12 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import { ScreenshotCarousel } from '../ScreenshotCarousel/ScreenshotCarousel.component';
 import { CustomButton } from '../CustomButton/CustomButton.component';
 import { TechList } from '../TechList/TechList.component';
+import { HeaderBlade } from '../HeaderBlade/HeaderBlade.component';
 
 import './ProjectCard.styles.scss';
 
 export const ProjectCard = ({ project, slug }) => {
   const icon = getImage(project.icon);
-  console.log(project);
   return (
     <li role="article" className="project-overview">
       <header className="project-overview-header">
@@ -26,10 +26,10 @@ export const ProjectCard = ({ project, slug }) => {
             />
           )}
         </div>
-        <div className="project-overview-title">
+        <HeaderBlade className="project-overview-title">
           <h3>{project.title}</h3>
           <TechList technologies={project.technologies} />
-        </div>
+        </HeaderBlade>
       </header>
       {project.type === 'frontend' && (
         <ScreenshotCarousel screenshots={project.screenshots} />
