@@ -1,7 +1,4 @@
-.contact {
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.contact-wrapper {
   background-image: linear-gradient(
     to bottom,
     #1f1f1f,
@@ -11,6 +8,12 @@
     #467291,
     #3d94b7
   );
+}
+
+.contact {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 
   header {
     margin-bottom: var(--spacing-8);

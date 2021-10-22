@@ -1,15 +1,31 @@
 .skills {
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--maxWidth-content);
+  min-height: 100vh;
   background-color: var(--color-dark-background);
-  height: 100vh;
-  flex-direction: row;
-  align-items: center;
 
   header {
-    width: 50%;
+    margin-bottom: var(--spacing-16);
+  }
+}
 
-    p {
-      width: 80%;
-      margin-left: var(--spacing-8);
+@media screen and (min-width: 1200px) {
+  .skills {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    header {
+      flex: 1 1 50%;
+
+      p {
+        width: 80%;
+      }
     }
+  }
+
+  .skills-list {
+    flex: 1 1 50%;
   }
 }

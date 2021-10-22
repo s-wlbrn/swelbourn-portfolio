@@ -1,14 +1,24 @@
-.about {
-  height: 50vh;
-  justify-content: center;
+.about-wrapper {
   background-color: var(--color-dark-slate-background);
+}
+
+.about {
+  min-height: 50vh;
+  justify-content: center;
 
   h2 {
     margin: 0 0 var(--spacing-8);
   }
 
-  p {
-    margin-left: var(--spacing-8);
-    width: 50%;
+  @media screen and (min-width: 576px) {
+    p {
+      width: 75%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    p {
+      width: 50%;
+    }
   }
 }

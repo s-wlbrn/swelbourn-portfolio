@@ -3,7 +3,7 @@
   gap: 1rem;
   align-self: center;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  width: 100vw;
+  width: 100%;
   justify-items: center;
 }
 
@@ -25,6 +25,7 @@
 .skill-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: absolute;
   width: 100%;
@@ -32,9 +33,15 @@
   opacity: 90%;
   background-color: var(--color-dark-slate-background);
   z-index: 1;
+
+  h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
 }
 
 .progress-border {
+  margin-bottom: 1rem;
   width: 90%;
   height: 0.5rem;
   background-color: #7f8c9f;
@@ -53,12 +60,7 @@
   background-color: #eceef1;
 }
 
-@media screen and (min-width: 800px) {
-  .skill-grid {
-    //grid-template-columns: repeat(5, 1fr);
-    max-width: 40%;
-  }
-
+@media screen and (min-width: 1024px) {
   .skill-info {
     display: none;
   }

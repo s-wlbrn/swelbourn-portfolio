@@ -40,7 +40,7 @@ export const SkillGrid = () => {
                   <span className="progress-bar-fill" />
                 </span>
               </div>
-              <p>{node.description}</p>
+              {node.description}
             </div>
             <GatsbyImage
               image={image}

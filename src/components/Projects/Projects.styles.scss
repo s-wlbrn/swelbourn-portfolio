@@ -1,11 +1,14 @@
+.projects-wrapper {
+  padding: 0 var(--spacing-8);
+}
+
 .projects {
-  margin: 0 1rem;
   min-height: 100vh;
   border-radius: 2rem;
   background-color: var(--color-dark-slate-background);
 
   h2 {
-    margin: var(--spacing-8) 0 var(--spacing-20) 0;
+    margin-bottom: var(--spacing-20);
   }
 
   & > section {
@@ -21,7 +24,7 @@
 }
 
 .projects-subheading {
-  margin: 0 0 var(--spacing-10) var(--spacing-8);
+  margin-bottom: var(--spacing-10);
   text-align: center;
 }
 

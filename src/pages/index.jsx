@@ -12,7 +12,7 @@ const Homepage = () => {
   return (
     <>
       <Intro />
-      <Layout>
+      <Layout className="index">
         <About />
         <Skills />
         <Projects />

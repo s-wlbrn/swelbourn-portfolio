@@ -6,7 +6,7 @@ import './Skills.styles.scss';
 
 export const Skills = () => {
   return (
-    <section className="skills" id="skills">
+    <section className="skills main-section" id="skills">
       <header>
         <h2>My skills</h2>
         <p>
@@ -15,7 +15,9 @@ export const Skills = () => {
           are some of the things I've worked with.
         </p>
       </header>
-      <SkillGrid />
+      <section className="skills-list">
+        <SkillGrid />
+      </section>
     </section>
   );
 };

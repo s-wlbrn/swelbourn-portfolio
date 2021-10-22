@@ -13,26 +13,21 @@ collections:
         label: 'Skills'
         file: 'content/skills.yaml'
         fields:
-          - label: 'Skill'
-            name: 'skills'
-            widget: 'list'
-            summary: '{{fields.name}}'
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - {
-                  label: 'Level',
-                  name: 'level',
-                  widget: 'number',
-                  value_type: 'int',
-                  min: 1,
-                  max: 10,
-                }
-              - {
-                  label: 'Level Description',
-                  name: 'description',
-                  widget: 'string',
-                }
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - {
+              label: 'Level',
+              name: 'level',
+              widget: 'number',
+              value_type: 'int',
+              min: 1,
+              max: 10,
+            }
+          - {
+              label: 'Level Description',
+              name: 'description',
+              widget: 'string',
+            }
 
   - name: 'frontend-projects'
     label: 'Frontend Projects'

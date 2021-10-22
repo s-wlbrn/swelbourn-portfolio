@@ -13,10 +13,14 @@
 }
 
 .project-overview-title {
-  margin: 0 -2rem 0 -7rem;
-  padding-left: 5rem;
-  width: 110%;
-  height: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 -1rem;
+  padding: 1rem 2rem 2rem;
+  width: 115%;
+  min-height: 6rem;
 
   h3 {
     margin: 0;
@@ -24,7 +28,7 @@
 }
 
 .project-overview-icon {
-  display: flex;
+  display: none;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
@@ -44,7 +48,6 @@
 .project-overview-info-links {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
 
   a {
     width: 48%;
@@ -59,11 +62,32 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 var(--spacing-8);
 }
 
-.project-overview-info-details-link {
-  text-align: left;
+.project-overview-info-details-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-8);
+  width: 100%;
+
+  p {
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .project-overview-icon {
+    display: flex;
+  }
+
+  .project-overview-title {
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    margin: 0 -2rem 0 -7rem;
+    padding-left: 5rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -73,8 +97,7 @@
   }
 
   .project-overview-info-details-description {
-    padding-right: 2rem;
-    width: 80%;
+    flex-direction: row;
   }
 
   .project-overview-info-details-link {
