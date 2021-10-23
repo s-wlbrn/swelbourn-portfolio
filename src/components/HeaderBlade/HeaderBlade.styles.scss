@@ -1,7 +1,6 @@
 .header-blade {
   display: flex;
   align-items: center;
-  padding-left: 5rem;
   background-color: var(--color-accent);
   clip-path: polygon(0 0, 95% 0, 101% calc(94% - 3vw), 0% 100%);
 }

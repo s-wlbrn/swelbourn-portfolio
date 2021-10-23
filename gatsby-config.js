@@ -5,8 +5,12 @@ module.exports = {
       name: `Stephen Welbourn`,
       summary: `Web developer.`,
     },
-    description: `A place to put recent personal projects I want to show off.`,
+    description: `The portfolio page of Stephen Welbourn, a web developer in Nashville, TN.`,
     siteUrl: `https://swelbourn-portfolio.netlify.app/`,
+    social: {
+      github: `https://www.linkedin.com/in/stephen-w-23719b1b3`,
+      linkedin: `https://github.com/swelbourn`,
+    },
   },
   plugins: [
     {

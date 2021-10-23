@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, navigate } from 'gatsby';
+import { graphql } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
 import { useModal } from '../libs/useModal';
@@ -10,7 +10,7 @@ import { HeaderBlade } from '../components/HeaderBlade/HeaderBlade.component';
 import { ProjectLinks } from '../components/ProjectLinks/ProjectLinks.component';
 import { ImageModal } from '../components/ImageModal/ImageModal.component';
 import { ScreenshotCarousel } from '../components/ScreenshotCarousel/ScreenshotCarousel.component';
-import BackButton from '../svg/BackButton.svg';
+import { BackButton } from '../components/BackButton/BackButton.component';
 
 import './project-page.styles.scss';
 
@@ -40,22 +40,16 @@ const ProjectPageTemplate = ({ data }) => {
           closeModal={closeModal}
         />
       )}
-      <header className="project-page-header">
-        <HeaderBlade className="project-page-title">
-          <button
-            type="button"
-            className="project-page-back-button"
-            onClick={() => navigate(-1)}
-          >
-            <BackButton />
-          </button>
+      <header className="project-page-header page-header">
+        <HeaderBlade className="project-page-title page-title">
+          <BackButton />
           <h1 itemProp="headline">{title}</h1>
         </HeaderBlade>
       </header>
       <Layout className="project-page">
         <Seo title={title} description={description} />
         <article
-          className="project-page-article"
+          className="project-page-article page-section"
           itemScope
           itemType="https://schema.org/SoftwareApplication"
         >
