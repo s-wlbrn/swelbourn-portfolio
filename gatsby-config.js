@@ -125,7 +125,7 @@ module.exports = {
         name: `Stephen Welbourn's Portfolio`,
         short_name: `swelbourn-portfolio`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#1f1f1f`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
