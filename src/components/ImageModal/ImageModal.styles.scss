@@ -50,6 +50,7 @@
   position: absolute;
   top: 5px;
   right: 5px;
+  z-index: 1;
 }
 
 .modal-close-icon {
@@ -71,7 +72,6 @@
     80% 0%,
     50% 30%
   );
-  z-index: 1;
 
   &:hover {
     opacity: 1;
