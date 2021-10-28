@@ -36,10 +36,10 @@ export const ProjectCard = ({ project, slug }) => {
       )}
       <section className="project-overview-info">
         <div className="project-overview-info-links">
-          <CustomButton type="button" hyperlink href={project.link}>
+          <CustomButton hyperlink href={project.link}>
             Link
           </CustomButton>
-          <CustomButton type="button" alternate hyperlink href={project.repo}>
+          <CustomButton alternate hyperlink href={project.repo}>
             Repo
           </CustomButton>
         </div>
