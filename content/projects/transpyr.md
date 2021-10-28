@@ -9,7 +9,7 @@ technologies:
   - JavaScript
   - React
   - Sass
-link: https://transpyr.netlify.app
+link: https://transpyr.app
 repo: https://github.com/swelbourn/transpyr
 screenshots:
   - screenshot: /img/transpyr/1.png
