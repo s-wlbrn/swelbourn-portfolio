@@ -82,7 +82,7 @@ export const Projects = () => {
               const project = el.node.frontmatter;
               return (
                 <ProjectCard
-                  key={project.name}
+                  key={project.title}
                   project={project}
                   slug={el.node.fields.slug}
                 />
@@ -97,7 +97,7 @@ export const Projects = () => {
               const project = el.node.frontmatter;
               return (
                 <ProjectCard
-                  key={project.name}
+                  key={project.title}
                   project={project}
                   slug={el.node.fields.slug}
                 />

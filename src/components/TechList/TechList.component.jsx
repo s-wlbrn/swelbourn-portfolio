@@ -38,7 +38,11 @@ export const TechList = ({ technologies }) => {
     <div className="project-tech">
       {images.map((el) => {
         return (
-          <div className="project-tech-icon-container" title={el.name}>
+          <div
+            key={el.name}
+            className="project-tech-icon-container"
+            title={el.name}
+          >
             <GatsbyImage
               key={el.name}
               image={el.image}
