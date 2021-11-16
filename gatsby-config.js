@@ -139,5 +139,11 @@ module.exports = {
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-perf-budgets`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
+    {
+      resolve: 'gatsby-plugin-brotli',
+      options: {
+        extensions: ['css', 'html', 'js', 'svg']
+      }
+    },
   ],
 }
