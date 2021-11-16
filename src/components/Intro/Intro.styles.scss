@@ -21,6 +21,19 @@
   }
 }
 
+.intro-particles {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; /* IE 8 & 9 */
+  filter: alpha(opacity=0); /* newer IE */
+  -moz-opacity: 0; /* Older than Firefox 0.9 */
+  -khtml-opacity: 0; /* Safari 1.x (pre WebKit) */
+  opacity: 0; /* (modern browsers) initially sets nothing displayed on page */
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
 @media screen and (min-width: 380px) {
   .intro {
     padding: 4rem;
