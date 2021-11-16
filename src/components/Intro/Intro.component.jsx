@@ -1,46 +1,22 @@
 import React from 'react';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
+import { particlesOptions } from './particlesOptions';
 
 import './Intro.styles.scss';
 
 export const Intro = () => {
+  const particlesLoaded = (container) => {
+    container.canvas.element.style.opacity = 1;
+  };
+
   return (
     <header className="intro">
       <Particles
+        loaded={particlesLoaded}
+        id="tsparticles"
         style={{ position: 'absolute', left: 0, top: 0, zIndex: 0 }}
-        params={{
-          particles: {
-            number: {
-              value: 50,
-            },
-            size: {
-              value: 3,
-            },
-            color: '#ad5b3b',
-            stroke: {
-              width: 2,
-              color: '#d99478',
-            },
-            links: {
-              enable: true,
-              distance: 150,
-              color: '#d99478',
-              shadow: {
-                enable: true,
-                blur: 5,
-                color: '#8ec4d9',
-              },
-            },
-          },
-          interactivity: {
-            events: {
-              onhover: {
-                enable: true,
-                mode: 'repulse',
-              },
-            },
-          },
-        }}
+        canvasClassName="intro-particles"
+        options={particlesOptions}
       />
 
       <h1>
