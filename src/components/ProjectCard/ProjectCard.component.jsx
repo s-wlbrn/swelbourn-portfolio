@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import loadable from '@loadable/component';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 
 import { CustomButton } from '../CustomButton/CustomButton.component';
 import { TechList } from '../TechList/TechList.component';
 import { HeaderBlade } from '../HeaderBlade/HeaderBlade.component';
-import { ProjectCardScreenshots } from '../ProjectCardScreenshots/ProjectCardScreenshots.component';
 
 import './ProjectCard.styles.scss';
+
+const ProjectCardScreenshots = loadable(
+  () => import('../ProjectCardScreenshots/ProjectCardScreenshots.component'),
+  {
+    fallback: <div>Loading...</div>,
+  }
+);
 
 export const ProjectCard = ({ project, slug }) => {
   const icon = getImage(project.icon);
