@@ -4,5 +4,5 @@
 
 <ul>
   <li>Created with Gatsby.</li>
-  <li><a href="https://github.com/Wufe/react-particles-js">"react-particles-js" - Wufe</a></li>
+  <li>CSS Particle Effect adapted from Takeshi Kano</li>
 </ul>
