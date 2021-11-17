@@ -132,6 +132,7 @@ module.exports = {
         icon: `src/images/swelbourn-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-remark-collection`,
