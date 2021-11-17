@@ -139,5 +139,6 @@ module.exports = {
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-perf-budgets`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
+    "gatsby-plugin-loadable-components-ssr",
   ],
 }
