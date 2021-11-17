@@ -7,7 +7,7 @@ import { ScreenshotCarousel } from '../ScreenshotCarousel/ScreenshotCarousel.com
 
 import './ProjectCardScreenshots.styles.scss';
 
-export const ProjectCardScreenshots = ({ screenshots }) => {
+const ProjectCardScreenshots = ({ screenshots }) => {
   const { modalActive, modalIndex, openModal, closeModal, scrollModal } =
     useModal(screenshots);
 
@@ -25,3 +25,5 @@ export const ProjectCardScreenshots = ({ screenshots }) => {
     </>
   );
 };
+
+export default ProjectCardScreenshots;
