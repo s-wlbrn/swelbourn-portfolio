@@ -32,15 +32,6 @@ export const SkillGrid = () => {
           <div key={node.name} className="skill-item">
             <div className="skill-info">
               <h3>{node.name}</h3>
-              <div className="progress-border">
-                <span
-                  className="progress-bar"
-                  style={{ width: `${node.level * 10}%` }}
-                >
-                  <span className="progress-bar-fill" />
-                </span>
-              </div>
-              {node.description}
             </div>
             <GatsbyImage
               image={image}
