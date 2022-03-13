@@ -8,7 +8,7 @@ headline: transpyr-api powers Transpyr’s event, authorization, and user manage
 technologies:
   - Node.js
   - MongoDB
-docs: https://api.transpyr.app/static/docs/v1/
+link: https://api.transpyr.app/static/docs/v1/
 repo: https://github.com/swelbourn/transpyr-api
 ---
 

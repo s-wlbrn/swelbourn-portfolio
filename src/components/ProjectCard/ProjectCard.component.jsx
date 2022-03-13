@@ -37,7 +37,7 @@ export const ProjectCard = ({ project, slug }) => {
       <section className="project-overview-info">
         <div className="project-overview-info-links">
           <CustomButton hyperlink href={project.link}>
-            Link
+            {project.type === 'frontend' ? 'Link' : 'Documentation'}
           </CustomButton>
           <CustomButton alternate hyperlink href={project.repo}>
             Repo
