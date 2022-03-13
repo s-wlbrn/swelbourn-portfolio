@@ -63,9 +63,14 @@ export const ImageModal = ({
       closeTimeoutMS={300}
     >
       <div className="container-modal-arrow" onClick={() => scrollModal(-1)}>
-        <button className="modal-arrow-left" type="button">
-          Previous
-        </button>
+        <button
+          className="modal-arrow-left"
+          id="modal-arrow-left"
+          type="button"
+        />
+        <label htmlFor="modal-arrow-left" className="label-modal-arrow">
+          Prev
+        </label>
       </div>
       <aside className="modal-body" onClick={closeModal}>
         <figure className="modal-image-container">
@@ -90,10 +95,10 @@ export const ImageModal = ({
           className="modal-arrow-right"
           id="modal-arrow-right"
           type="button"
-          onClick={() => scrollModal(-1)}
-        >
+        />
+        <label htmlFor="modal-arrow-left" className="label-modal-arrow">
           Next
-        </button>
+        </label>
       </div>
     </Modal>
   );

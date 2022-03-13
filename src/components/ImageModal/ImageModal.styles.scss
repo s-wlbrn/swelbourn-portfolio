@@ -1,6 +1,9 @@
 .container-modal-arrow {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
   height: 50vh;
   flex-shrink: 1;
 }
@@ -26,6 +29,14 @@
     95% 0%
   );
   clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 95% 100%, 0% 50%, 95% 0%);
+}
+
+.label-modal-arrow {
+  font-size: var(--fontSize-2);
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-main-light);
+  text-align: center;
+  margin: 0;
 }
 
 .modal-body {
