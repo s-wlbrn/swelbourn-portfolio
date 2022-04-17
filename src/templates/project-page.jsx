@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 
 import { useModal } from '../libs/useModal';
 
@@ -13,6 +13,7 @@ import { ScreenshotCarousel } from '../components/ScreenshotCarousel/ScreenshotC
 import { BackButton } from '../components/BackButton/BackButton.component';
 
 import './project-page.styles.scss';
+import { ScreenshotSlide } from '../components/ScreenshotSlide/ScreenshotSlide.component';
 
 const ProjectPageTemplate = ({ data }) => {
   const {
@@ -76,13 +77,12 @@ const ProjectPageTemplate = ({ data }) => {
                     const image = getImage(el.screenshot);
                     return (
                       <li
-                        key={el.screenshot.id}
+                        key={el}
                         className="project-page-screenshot-grid-item"
-                        onClick={() => openModal(i)}
                       >
-                        <GatsbyImage
+                        <ScreenshotSlide
                           image={image}
-                          imgStyle={{ objectFit: 'contain' }}
+                          openModal={() => openModal(i)}
                         />
                       </li>
                     );

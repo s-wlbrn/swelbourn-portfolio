@@ -36,11 +36,6 @@
 
 .project-page-screenshots {
   flex: 1 1 50%;
-
-  .screenshot-carousel {
-    background-color: var(--color-dark-background);
-    border-radius: 2rem;
-  }
 }
 
 .project-page-screenshot-grid {
@@ -59,7 +54,6 @@
   height: 10rem;
   background-color: var(--color-dark-background);
   border: 2px solid white;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 576px) {
