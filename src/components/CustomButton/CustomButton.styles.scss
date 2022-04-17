@@ -15,7 +15,8 @@
   text-decoration: none;
   transition: 0.1s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--color-main-light);
     color: black;
   }
@@ -23,7 +24,8 @@
   &.alternate {
     background-color: var(--color-accent);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--color-accent-light);
       color: black;
     }
