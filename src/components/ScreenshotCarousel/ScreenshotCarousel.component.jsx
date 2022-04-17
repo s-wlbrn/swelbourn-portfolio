@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 
 import { mod } from '../../libs/mod';
 
 import './ScreenshotCarousel.styles.scss';
+import { ScreenshotSlide } from '../ScreenshotSlide/ScreenshotSlide.component';
 
 export const ScreenshotCarousel = ({ screenshots, openModal }) => {
   const [displayArr, setDisplayArr] = useState([0, 1, 2]);
@@ -30,29 +31,21 @@ export const ScreenshotCarousel = ({ screenshots, openModal }) => {
       >
         <div className="carousel-arrow-left" />
       </button>
-      <span className={`carousel-content ${loaded ? 'loaded' : ''}`}>
+      <ul className={`carousel-content ${loaded ? 'loaded' : ''}`}>
         {displayArr.map((el) => {
           const imageIndex = mod(el, screenshots.length);
           const image = getImage(screenshots[imageIndex].screenshot);
 
           return (
-            <figure
-              key={`${el}-${imageIndex}`}
-              onClick={() => openModal(imageIndex)}
-            >
-              <div className="carousel-slide">
-                <GatsbyImage
-                  image={image}
-                  alt="screenshot"
-                  imgStyle={{
-                    objectFit: 'contain',
-                  }}
-                />
-              </div>
-            </figure>
+            <li key={el} className="carousel-slide">
+              <ScreenshotSlide
+                image={image}
+                openModal={() => openModal(imageIndex)}
+              />
+            </li>
           );
         })}
-      </span>
+      </ul>
       <button
         className="carousel-control-right"
         type="button"

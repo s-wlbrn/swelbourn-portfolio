@@ -44,12 +44,10 @@
 }
 
 .carousel-content {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  justify-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
   width: 100%;
-  overflow: hidden;
-
   opacity: 0;
 
   -webkit-transition: 0.25s all ease-in-out;
@@ -64,20 +62,27 @@
 
 .carousel-slide {
   display: flex;
-  padding: 5px;
   width: 15rem;
   height: 10rem;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+
+  &:focus-within,
+  &:hover {
+    transform: scale(1.05);
+    outline-color: var(--color-accent);
+    border: 5px solid var(--color-accent);
+  }
+}
+
+.carousel-slide:nth-child(2) {
+  display: none;
+}
+
+.carousel-slide:nth-child(3) {
+  display: none;
 }
 
 @media screen and (min-width: 650px) {
-  .carousel-content {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
   [class^='carousel-arrow'] {
     background-color: var(--color-main-light);
     opacity: 1;
@@ -92,6 +97,18 @@
   }
 
   .carousel-slide {
-    border: 2px solid white;
+    border: 1px solid white;
+  }
+}
+
+@media screen and (min-width: 943px) {
+  .carousel-slide:nth-child(2) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1296px) {
+  .carousel-slide:nth-child(3) {
+    display: block;
   }
 }
