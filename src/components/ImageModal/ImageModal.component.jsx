@@ -62,26 +62,23 @@ export const ImageModal = ({
       contentLabel="Screenshot"
       closeTimeoutMS={300}
     >
-      <div className="container-modal-arrow" onClick={() => scrollModal(-1)}>
-        <button
-          className="modal-arrow-left"
-          id="modal-arrow-left"
-          type="button"
-        />
-        <label htmlFor="modal-arrow-left" className="label-modal-arrow">
-          Prev
-        </label>
-      </div>
+      <button
+        className="modal-scroll"
+        type="button"
+        onClick={() => scrollModal(-1)}
+      >
+        <div className="modal-arrow-left" />
+        Prev
+      </button>
       <aside className="modal-body" onClick={closeModal}>
         <figure className="modal-image-container">
-          <div
+          <button
             className="modal-close-button"
-            role="button"
+            type="button"
             onClick={closeModal}
-            tabIndex="0"
           >
             <div className="modal-close-icon" />
-          </div>
+          </button>
           <GatsbyImage
             image={image}
             alt="Project screenshot"
@@ -90,16 +87,14 @@ export const ImageModal = ({
           />
         </figure>
       </aside>
-      <div className="container-modal-arrow" onClick={() => scrollModal(1)}>
-        <button
-          className="modal-arrow-right"
-          id="modal-arrow-right"
-          type="button"
-        />
-        <label htmlFor="modal-arrow-left" className="label-modal-arrow">
-          Next
-        </label>
-      </div>
+      <button
+        className="modal-scroll"
+        type="button"
+        onClick={() => scrollModal(1)}
+      >
+        <div className="modal-arrow-right" />
+        Next
+      </button>
     </Modal>
   );
 };

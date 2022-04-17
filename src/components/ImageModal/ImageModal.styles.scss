@@ -4,11 +4,24 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  height: 50vh;
   flex-shrink: 1;
+
+  &:focus-within {
+    outline: auto 5px var(--color-accent);
+  }
+}
+
+[class^='modal-scroll'] {
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: var(--fontSize-2);
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-main-light);
 }
 
 [class^='modal-arrow'] {
+  margin: 1rem 0;
   background-color: var(--color-main-light);
   height: 5rem;
   width: 4rem;
@@ -31,14 +44,6 @@
   clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 95% 100%, 0% 50%, 95% 0%);
 }
 
-.label-modal-arrow {
-  font-size: var(--fontSize-2);
-  font-weight: var(--fontWeight-bold);
-  color: var(--color-main-light);
-  text-align: center;
-  margin: 0;
-}
-
 .modal-body {
   display: flex;
   justify-content: center;
@@ -56,19 +61,28 @@
 }
 
 .modal-close-button {
+  padding: 0;
   width: 2rem;
   height: 2rem;
   position: absolute;
   top: 5px;
   right: 5px;
+  opacity: 0.6;
+  background: none;
+  border: none;
   z-index: 1;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
 .modal-close-icon {
   width: 100%;
   height: 100%;
   background-color: var(--color-main-light);
-  opacity: 0.6;
+
   clip-path: polygon(
     20% 0%,
     0% 20%,
@@ -83,10 +97,6 @@
     80% 0%,
     50% 30%
   );
-
-  &:hover {
-    opacity: 1;
-  }
 }
 
 .ReactModal__Overlay {
