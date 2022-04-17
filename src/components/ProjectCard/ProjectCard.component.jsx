@@ -16,11 +16,11 @@ export const ProjectCard = ({ project, slug }) => {
       <header className="project-overview-header">
         <div className="project-overview-icon">
           {project.type === 'frontend' ? (
-            <GatsbyImage image={icon} alt={`${project.name} icon`} />
+            <GatsbyImage image={icon} alt={`${project.name} logo`} />
           ) : (
             <StaticImage
               src="../../../static/img/backend.png"
-              alt="backend project"
+              alt=""
               placeholder="tracedSVG"
               width={75}
             />
