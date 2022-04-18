@@ -86,6 +86,10 @@ body {
   background-color: var(--color-dark-background);
 }
 
+body.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
 main {
   overflow: hidden;
 }
@@ -236,6 +240,14 @@ a {
   color: var(--color-main-light);
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Default Focus Style */
+
+a:focus,
+button:focus {
+  outline-width: 3px;
+  outline-color: var(--color-accent-light);
 }
 
 /* Custom classes */
