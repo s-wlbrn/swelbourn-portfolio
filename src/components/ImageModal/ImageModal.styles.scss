@@ -1,3 +1,5 @@
+@use '../../scss/main' as main;
+
 .image-modal {
   display: flex;
   flex-direction: column;
@@ -39,6 +41,10 @@
   &:focus {
     opacity: 1;
   }
+}
+
+.modal-close-label {
+  @include main.visiuallyHidden;
 }
 
 .modal-close-icon {

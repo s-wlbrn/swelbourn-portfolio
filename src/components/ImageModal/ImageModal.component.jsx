@@ -89,6 +89,7 @@ export const ImageModal = ({
           type="button"
           onClick={closeModal}
         >
+          <p className="modal-close-label">Close dialog</p>
           <div className="modal-close-icon" />
         </button>
         {children}
