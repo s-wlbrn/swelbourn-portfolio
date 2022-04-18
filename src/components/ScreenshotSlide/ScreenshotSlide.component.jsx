@@ -5,7 +5,7 @@ import './ScreenshotSlide.styles.scss';
 
 export const ScreenshotSlide = ({ image, openModal }) => (
   <button type="button" className="screenshot-slide" onClick={openModal}>
-    <p className="screenshot-slide-label">Enlarge screenshot</p>
+    <p className="screenshot-slide-label">Enlarge</p>
     <GatsbyImage
       image={image}
       className="screenshot-image"
