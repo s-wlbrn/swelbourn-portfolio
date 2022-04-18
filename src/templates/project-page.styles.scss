@@ -49,11 +49,18 @@
 
 .project-page-screenshot-grid-item {
   display: flex;
-  padding: 5px;
   width: 15rem;
   height: 10rem;
   background-color: var(--color-dark-background);
   border: 2px solid white;
+  transition: all 0.1s ease-in-out;
+
+  &:focus-within,
+  &:hover {
+    transform: scale(1.05);
+    outline-color: var(--color-accent);
+    border: 5px solid var(--color-accent);
+  }
 }
 
 @media screen and (min-width: 576px) {
