@@ -14,7 +14,13 @@
     fill: white;
   }
 
-  &:hover {
+  &:focus {
+    outline-width: 4px;
+    outline-color: var(--color-main-light);
+  }
+
+  &:hover,
+  &:focus {
     path {
       fill: var(--color-main-light);
     }
