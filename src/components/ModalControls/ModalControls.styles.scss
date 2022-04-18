@@ -1,0 +1,80 @@
+.modal-controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 35px, transparent);
+}
+
+.modal-page-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 4rem;
+  color: var(--color-main-light);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+[class^='modal-scroll'] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1rem;
+  width: 40%;
+  background: none;
+  border: none;
+  font-size: var(--fontSize-2);
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-main-light);
+  z-index: 1;
+
+  &:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+
+  &:focus {
+    outline-width: 2px;
+    outline-color: var(--color-accent-light);
+  }
+}
+
+[class^='modal-arrow'] {
+  margin: 1rem 0;
+  background-color: var(--color-main-light);
+  height: 2rem;
+  width: 4rem;
+}
+
+.modal-arrow-right {
+  -webkit-clip-path: polygon(5% 0%, 100% 50%, 5% 100%, 0% 100%, 50% 50%, 0% 0%);
+  clip-path: polygon(5% 0%, 100% 50%, 5% 100%, 0% 100%, 50% 50%, 0% 0%);
+}
+
+.modal-arrow-left {
+  -webkit-clip-path: polygon(
+    100% 0%,
+    50% 50%,
+    100% 100%,
+    95% 100%,
+    0% 50%,
+    95% 0%
+  );
+  clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 95% 100%, 0% 50%, 95% 0%);
+}
+
+@media screen and (min-width: 768px) {
+  .modal-controls {
+    padding: 1rem;
+    height: 15%;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  [class^='modal-scroll'] {
+    justify-content: center;
+  }
+}
