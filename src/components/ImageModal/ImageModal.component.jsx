@@ -1,6 +1,8 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useMemo } from 'react';
 import Modal from 'react-modal';
+import { createFocusTrap } from 'focus-trap';
+import { ModalControls } from '../ModalControls/ModalControls.component';
 
 import './ImageModal.styles.scss';
 
@@ -15,17 +17,19 @@ const modalStyles = {
   },
   content: {
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    flexGrow: 1,
     position: 'relative',
     top: 'auto',
     left: 'auto',
     right: 'auto',
     bottom: 'auto',
-    width: '100%',
-    margin: '32px 1rem',
+    margin: 0,
     padding: 0,
     border: 0,
+    overflow: 'auto',
     backgroundColor: 'rgba(0, 0, 0, 0.00)',
   },
 };
@@ -36,12 +40,32 @@ export const ImageModal = ({
   closeModal,
   scrollModal,
 }) => {
+  const modalRef = useRef(null);
+
+  // create and manage focus trap
+  useEffect(() => {
+    const focusTrap = createFocusTrap(modalRef.current);
+    focusTrap.activate();
+    return () => {
+      focusTrap.deactivate();
+    };
+  }, []);
+
+  // keyboard listeners
   useEffect(() => {
     const handleKey = (e) => {
-      if (e.key === 'ArrowLeft') {
-        scrollModal(-1);
-      } else if (e.key === 'ArrowRight') {
-        scrollModal(1);
+      switch (e.key) {
+        case 'ArrowLeft':
+          scrollModal(-1);
+          break;
+        case 'ArrowRight':
+          scrollModal(1);
+          break;
+        case 'Escape':
+          closeModal();
+          break;
+        default:
+          break;
       }
     };
 
@@ -50,51 +74,64 @@ export const ImageModal = ({
     return function removeListener() {
       window.removeEventListener('keydown', handleKey);
     };
-  }, [scrollModal]);
+  }, [scrollModal, closeModal]);
 
-  const image = getImage(imageList[modalIndex]?.screenshot);
+  // get modal image
+  const image = useMemo(() => {
+    return getImage(imageList[modalIndex]?.screenshot);
+  }, [imageList, modalIndex]);
+
+  const ModalWrapper = (props, children) => {
+    return (
+      <div {...props} className="image-modal" ref={modalRef}>
+        <button
+          className="modal-close-button"
+          type="button"
+          onClick={closeModal}
+        >
+          <div className="modal-close-icon" />
+        </button>
+        {children}
+        <ModalControls
+          pageNumber={modalIndex + 1}
+          total={imageList.length}
+          scrollModal={scrollModal}
+        />
+      </div>
+    );
+  };
+
+  const ModalContainer = (props, children) => {
+    return (
+      // react-modal default tabindex is -1 which is trapping keyboard focus when content is clicked
+      <div {...props} tabIndex="">
+        {children}
+      </div>
+    );
+  };
 
   return (
     <Modal
       isOpen
       onRequestClose={closeModal}
       style={modalStyles}
-      contentLabel="Screenshot"
+      shouldCloseOnEsc={false}
+      shouldFocusAfterRender={false}
+      contentLabel="image"
       closeTimeoutMS={300}
+      overlayElement={ModalWrapper}
+      contentElement={ModalContainer}
     >
-      <button
-        className="modal-scroll"
-        type="button"
-        onClick={() => scrollModal(-1)}
-      >
-        <div className="modal-arrow-left" />
-        Prev
-      </button>
-      <aside className="modal-body" onClick={closeModal}>
-        <figure className="modal-image-container">
-          <button
-            className="modal-close-button"
-            type="button"
-            onClick={closeModal}
-          >
-            <div className="modal-close-icon" />
-          </button>
-          <GatsbyImage
-            image={image}
-            alt="Project screenshot"
-            className="modal-image"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </figure>
-      </aside>
-      <button
-        className="modal-scroll"
-        type="button"
-        onClick={() => scrollModal(1)}
-      >
-        <div className="modal-arrow-right" />
-        Next
-      </button>
+      <figure className="modal-image-container" aria-live="assertive">
+        <GatsbyImage
+          image={image}
+          alt="Project screenshot"
+          className="modal-image"
+          imgStyle={{
+            objectFit: 'contain',
+          }}
+        />
+      </figure>
     </Modal>
   );
 };
