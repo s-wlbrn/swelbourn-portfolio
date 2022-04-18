@@ -8,6 +8,7 @@
     "@fontsource/montserrat": "^4.5.1",
     "@fontsource/work-sans": "^4.5.1",
     "@formspree/react": "^2.2.4",
+    "focus-trap": "^6.7.3",
     "gatsby": "^3.14.5",
     "gatsby-plugin-feed": "^3.13.0",
     "gatsby-plugin-google-analytics": "^3.13.0",
