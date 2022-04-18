@@ -1,3 +1,5 @@
+@use '../../scss/main' as main;
+
 .screenshot-carousel {
   position: relative;
   padding: 1rem;
@@ -7,12 +9,21 @@
   overflow-x: hidden;
 }
 
+.carousel-scroll-label {
+  @include main.visiuallyHidden;
+}
+
 [class^='carousel-control'] {
   position: absolute;
   height: 12rem;
   width: 4rem;
   background: none;
   border: none;
+
+  &:focus {
+    outline-width: 2px;
+    outline-color: var(--color-accent-light);
+  }
 }
 
 .carousel-control-right {

@@ -29,6 +29,7 @@ export const ScreenshotCarousel = ({ screenshots, openModal }) => {
         type="button"
         onClick={() => scrollCarousel(-1)}
       >
+        <p className="carousel-scroll-label">Scroll carousel left</p>
         <div className="carousel-arrow-left" />
       </button>
       <ul className={`carousel-content ${loaded ? 'loaded' : ''}`}>
@@ -51,6 +52,7 @@ export const ScreenshotCarousel = ({ screenshots, openModal }) => {
         type="button"
         onClick={() => scrollCarousel(1)}
       >
+        <p className="carousel-scroll-label">Scroll carousel right</p>
         <div className="carousel-arrow-right" />
       </button>
     </div>

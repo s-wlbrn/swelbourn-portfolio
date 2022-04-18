@@ -1,9 +1,15 @@
+@use '../../scss/main' as main;
+
 .screenshot-slide {
   width: 100%;
   height: 100%;
   padding: 4px;
   background: none;
   border: none;
+}
+
+.screenshot-slide-label {
+  @include main.visiuallyHidden;
 }
 
 .screenshot-image {
