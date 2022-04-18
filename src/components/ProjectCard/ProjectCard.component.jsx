@@ -12,7 +12,7 @@ import './ProjectCard.styles.scss';
 export const ProjectCard = ({ project, slug }) => {
   const icon = getImage(project.icon);
   return (
-    <li role="article" className="project-overview">
+    <article className="project-overview">
       <header className="project-overview-header">
         <div className="project-overview-icon">
           {project.type === 'frontend' ? (
@@ -37,7 +37,7 @@ export const ProjectCard = ({ project, slug }) => {
       <section className="project-overview-info">
         <div className="project-overview-info-links">
           <CustomButton hyperlink href={project.link}>
-            {project.type === 'frontend' ? 'Link' : 'Documentation'}
+            {project.type === 'frontend' ? 'Link' : 'Docs'}
           </CustomButton>
           <CustomButton alternate hyperlink href={project.repo}>
             Repo
@@ -50,6 +50,6 @@ export const ProjectCard = ({ project, slug }) => {
           </div>
         </div>
       </section>
-    </li>
+    </article>
   );
 };

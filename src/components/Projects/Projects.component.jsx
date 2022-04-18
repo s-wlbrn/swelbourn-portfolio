@@ -81,11 +81,9 @@ export const Projects = () => {
             {data.frontendProjects.edges.map((el) => {
               const project = el.node.frontmatter;
               return (
-                <ProjectCard
-                  key={project.title}
-                  project={project}
-                  slug={el.node.fields.slug}
-                />
+                <li key={project.title}>
+                  <ProjectCard project={project} slug={el.node.fields.slug} />
+                </li>
               );
             })}
           </ol>
@@ -96,11 +94,9 @@ export const Projects = () => {
             {data.backendProjects.edges.map((el) => {
               const project = el.node.frontmatter;
               return (
-                <ProjectCard
-                  key={project.title}
-                  project={project}
-                  slug={el.node.fields.slug}
-                />
+                <li key={project.title}>
+                  <ProjectCard project={project} slug={el.node.fields.slug} />
+                </li>
               );
             })}
           </ol>
