@@ -1,18 +1,8 @@
 .back-button {
-  margin-right: 0.5rem;
+  padding-right: 1rem;
   background: none;
   border: none;
   cursor: pointer;
-
-  svg {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  path {
-    transition: fill 0.2s;
-    fill: white;
-  }
 
   &:focus {
     outline-width: 4px;
@@ -21,19 +11,22 @@
 
   &:hover,
   &:focus {
-    path {
-      fill: var(--color-main-light);
+    .back-arrow-icon {
+      background-color: var(--color-main-light);
     }
   }
 }
 
-@media screen and (min-width: 576px) {
-  .back-button {
-    margin-right: 1rem;
+.back-arrow-icon {
+  width: 3rem;
+  height: 3rem;
+  mask: url(/svg/backarrow.svg) no-repeat center center;
+  background-color: white;
+}
 
-    svg {
-      width: 4rem;
-      height: 4rem;
-    }
+@media screen and (min-width: 576px) {
+  .back-arrow-icon {
+    width: 4rem;
+    height: 4rem;
   }
 }

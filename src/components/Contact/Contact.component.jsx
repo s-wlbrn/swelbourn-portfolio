@@ -13,10 +13,10 @@ export const Contact = () => {
         </header>
         <div className="contact-social-links">
           <a href="https://www.linkedin.com/in/swelbourn/">
-            <img src="/img/linkedin-64px.png" alt="linkedin logo" />
+            <img src="/svg/linkedin.svg" alt="linkedin logo" />
           </a>
           <a href="https://github.com/swelbourn">
-            <img src="/img/github-64px.png" alt="github logo" />
+            <img src="/svg/github.svg" alt="github logo" />
           </a>
         </div>
         <ContactForm />
