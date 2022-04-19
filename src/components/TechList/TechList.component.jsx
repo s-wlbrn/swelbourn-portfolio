@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import './TechList.styles.scss';
 
@@ -12,7 +12,12 @@ export const TechList = ({ technologies }) => {
           node {
             image {
               childImageSharp {
-                gatsbyImageData(width: 32, placeholder: TRACED_SVG, quality: 90)
+                gatsbyImageData(
+                  width: 32
+                  placeholder: TRACED_SVG
+                  formats: [WEBP]
+                  quality: 90
+                )
               }
             }
             name
@@ -22,17 +27,20 @@ export const TechList = ({ technologies }) => {
     }
   `);
 
-  const images = technologies.map((tech) => {
-    const {
-      node: { name, image },
-    } = techIcons.allSkillsYaml.edges.find((icon) => {
-      return icon.node.name === tech;
+  // map tech logos to array
+  const images = useMemo(() => {
+    return technologies.map((tech) => {
+      const {
+        node: { name, image },
+      } = techIcons.allSkillsYaml.edges.find((icon) => {
+        return icon.node.name === tech;
+      });
+      return {
+        name,
+        image: getImage(image),
+      };
     });
-    return {
-      name,
-      image: getImage(image),
-    };
-  });
+  }, [technologies, techIcons]);
 
   return (
     <div className="project-tech">
