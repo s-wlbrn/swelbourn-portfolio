@@ -8,13 +8,24 @@ import { About } from '../components/About/About.component';
 import { Skills } from '../components/Skills/Skills.component';
 import { Projects } from '../components/Projects/Projects.component';
 import { Contact } from '../components/Contact/Contact.component';
-
-// get the viewport height and derive real value for a vh unit
-const vh = window.innerHeight * 0.01;
-// set the value in the --vh custom property to root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+import { setWindowHeightProperty } from '../libs/setWindowHeightProperty';
 
 const Homepage = () => {
+  React.useEffect(() => {
+    // set real vh value
+    setWindowHeightProperty();
+
+    // listen for window resize to reset vh value
+    window.addEventListener('resize', () => {
+      setWindowHeightProperty();
+    });
+
+    // remove listener on unmount
+    return () => {
+      window.removeEventListener('resize', setWindowHeightProperty);
+    };
+  }, []);
+
   return (
     <>
       <Seo
