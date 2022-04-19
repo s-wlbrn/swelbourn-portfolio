@@ -26,7 +26,12 @@ export const Projects = () => {
               link
               icon {
                 childImageSharp {
-                  gatsbyImageData(width: 75, placeholder: TRACED_SVG)
+                  gatsbyImageData(
+                    width: 75
+                    placeholder: TRACED_SVG
+                    formats: [WEBP]
+                    quality: 90
+                  )
                 }
               }
               description
@@ -36,7 +41,7 @@ export const Projects = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       transformOptions: { fit: CONTAIN }
-                      formats: [JPG]
+                      formats: [WEBP]
                       quality: 90
                     )
                   }
