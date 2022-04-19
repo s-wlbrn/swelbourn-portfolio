@@ -11,6 +11,7 @@ Modal.setAppElement(`#___gatsby`);
 const modalStyles = {
   overlay: {
     display: 'flex',
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.80)',
     zIndex: 2,
@@ -20,14 +21,10 @@ const modalStyles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    flexGrow: 1,
     position: 'relative',
-    top: 'auto',
-    left: 'auto',
-    right: 'auto',
-    bottom: 'auto',
+    inset: 'auto auto 1.5rem',
     margin: 0,
-    padding: 0,
+    padding: '1rem 0',
     border: 0,
     overflow: 'auto',
     backgroundColor: 'rgba(0, 0, 0, 0.00)',
@@ -128,9 +125,7 @@ export const ImageModal = ({
           image={image}
           alt="Project screenshot"
           className="modal-image"
-          imgStyle={{
-            objectFit: 'contain',
-          }}
+          objectFit="contain"
         />
       </figure>
     </Modal>
